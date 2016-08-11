@@ -1,0 +1,66 @@
+
+{% extends 'base.tpl' %}
+
+{% block title %}我的测试-{% endblock %}
+
+{% block head %}
+<link href="./style/test.css?v={[now()]}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+
+	<div class="index-main">
+
+		<dl>
+			<dt>普通弹窗，只有一个确定按钮</dt>
+			<dd>
+				<button id="btn-1">显示弹窗</button>
+			</dd>
+		</dl>
+
+
+
+		<dl>
+			<dt>交互弹窗，确定和取消按钮</dt>
+			<dd>
+				<button id="btn-2">显示弹窗</button>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt>交互弹窗，可以修改按钮文案</dt>
+			<dd>
+				<button id="btn-2-2">显示弹窗</button>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt>只有右上角的关闭按钮</dt>
+			<dd>
+				<button id="btn-3">显示弹窗</button>
+			</dd>
+		</dl>
+
+
+		<dl>
+			<dt>底部有遮罩的弹窗</dt>
+			<dd>
+				<button id="btn-4-1">显示弹窗</button>
+				<button id="btn-4-2">显示弹窗</button>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt>阻止弹窗关闭</dt>
+			<dd>
+				<button id="btn-4-3">显示弹窗</button>
+			</dd>
+		</dl>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+<script src="./script/test.js?v={[now()]}"></script>
+{% endblock %}
