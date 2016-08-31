@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 	cssmin = require('gulp-cssmin'),
 	runSequence = require('run-sequence'),
 	htmlmin = require('gulp-htmlmin'),
+	copy = require('gulp-contrib-copy'),
 	funPack=require('./function');
 
 
@@ -104,6 +105,13 @@ gulp.task('htmlmin_change', function () {
 	    .pipe(htmlmin({collapseWhitespace: true}))
 	    .pipe(gulp.dest(config.build))
 	    .on("end", reload);
+});
+
+//复制html
+gulp.task('copy_index', function() {
+	return gulp.src(config.build+'/index.html')
+		.pipe(copy())
+	    .pipe(gulp.dest('./'));
 });
 
 //tomd任务
@@ -291,7 +299,7 @@ uglifyWatcher.on('added',function(event){
 
 
 gulp.task('build', function (callback) {
-  runSequence('stylus_build','cssmin_build','swig_build','htmlmin_build','tomd_build','webpack_build','uglify_build', callback);
+  runSequence('stylus_build','cssmin_build','swig_build','htmlmin_build','copy_index','tomd_build','webpack_build','uglify_build', callback);
 });
 
 gulp.task('pack', function () {
