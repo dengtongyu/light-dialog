@@ -1,5 +1,5 @@
 
-var dialog=require('./lightDialog');
+var dialog=require('./lightDialog.js');
 
 
 document.querySelector('#btn-1').onclick=function () {
