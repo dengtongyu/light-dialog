@@ -46,7 +46,7 @@ function extend(des,src){
 //创建dom
 function strDom(html) {
 	tempDom = document.createElement('div');
-	tempDom.innerHTML = html.replace(/\s+|\n/g,' ').replace(/>\s</g,'><');
+	tempDom.innerHTML = html;
 	return tempDom.childNodes;
 };
 
@@ -54,10 +54,9 @@ function strDom(html) {
 function filterNode(nodeList) {
 	var newNodeList=[];
 	for (var i = 0; i < nodeList.length; i++) {
-		if (nodeList[i].nodeName!='#text') {
-			newNodeList.push(nodeList[i]);
-		}
+		newNodeList.push(nodeList[i]);
 	}
+	console.log(newNodeList);
 	return newNodeList;
 }
 
@@ -137,7 +136,7 @@ function baseMsgPop(obj) {
 	insertHtml(nodeList,bodyDom);
 	var popDom=selectPopDom(popObj[obj.popId],obj.popId);
 	if (obj.text) {
-		insertHtml(strDom(obj.text),popDom.querySelector('#dialog-content'));
+		insertHtml(filterNode(strDom(obj.text)),popDom.querySelector('#dialog-content'));
 	}
 	popDomCenter(popDom,obj.popId);
 

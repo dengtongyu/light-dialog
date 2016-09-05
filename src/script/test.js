@@ -33,11 +33,11 @@ document.querySelector('#btn-4-1').onclick=function () {
 }
 
 document.querySelector('#btn-4-2').onclick=function () {
-	dialog.showMsgRightTop('这是一个有遮罩的弹窗！',null,true);	//通过最后一个参数为true开启遮罩
+	dialog.showMsgRightTop('<h1>这是一个有遮罩的弹窗！</h1>',null,true);	//通过最后一个参数为true开启遮罩
 }
 
 document.querySelector('#btn-4-3').onclick=function () {
-	dialog.showMsgBoth('我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！',function(){
+	dialog.showMsgBoth('<p>我是一个不会关闭的弹窗！</p><p>我是一个不会关闭的弹窗！</p><p>我是一个不会关闭的弹窗！</p>',function(){
 		dialog.showMsg('下面的弹窗没有关闭哟！');
 		return false			//通过return false阻止弹窗关闭
 	},null,null,null,true);		//通过最后一个参数为true开启遮罩
