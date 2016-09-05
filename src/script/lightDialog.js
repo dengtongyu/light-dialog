@@ -56,7 +56,6 @@ function filterNode(nodeList) {
 	for (var i = 0; i < nodeList.length; i++) {
 		newNodeList.push(nodeList[i]);
 	}
-	console.log(newNodeList);
 	return newNodeList;
 }
 
