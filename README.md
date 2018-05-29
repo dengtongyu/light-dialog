@@ -1,4 +1,6 @@
-#light-dialog
+# light-dialog
+
+![light-dialog](https://github.com/dengtongyu/light-dialog/res/light-dialog.png) 
 
 ## 前言
 light-dialog弹窗组件用于手机移动端页面，不依赖jQuery或者zepto，不兼容低版本IE浏览器。
@@ -6,7 +8,9 @@ light-dialog基于flexible适配方案，样式表单位采用rem。
 light-dialog基于webpack，JavaScript需要模块化引入。
 
 ## 运行
-在light-dialog目录里面运行 `npm install` ,安装完毕后运行 `gulp` 启动服务。
+```sh
+npm install light-dialog
+```
 
 ## 用法
 
