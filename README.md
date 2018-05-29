@@ -65,20 +65,20 @@ document.querySelector('#btn-3').onclick=function () {
 ```
 ### 底部有遮罩的弹窗
 ```js
-document.querySelector('#btn-4-1').onclick=function () {
-	dialog.alert('这是一个有遮罩的弹窗！',null,true);	//通过最后一个参数为true开启遮罩
+document.querySelector('#btn-4-1').onclick = function() {
+	dialog.alert('这是一个有遮罩的弹窗！', null, true); //通过最后一个参数为true开启遮罩
 }
-document.querySelector('#btn-4-2').onclick=function () {
-	dialog.confirm('这是一个有遮罩的弹窗！',null,true);	//通过最后一个参数为true开启遮罩
+document.querySelector('#btn-4-2').onclick = function() {
+	dialog.tapPiece('这是一个有遮罩的弹窗！', null, true); //通过最后一个参数为true开启遮罩
 }
 ```
 ### 阻止弹窗关闭
 ```js
-document.querySelector('#btn-4-3').onclick=function () {
-	dialog.confirm('我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！',function(){
+document.querySelector('#btn-4-3').onclick = function() {
+	dialog.confirm('我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！我是一个不会关闭的弹窗！', function() {
 		dialog.alert('下面的弹窗没有关闭哟！');
-		return false			//通过return false阻止弹窗关闭
-	},null,null,null,true);		//通过最后一个参数为true开启遮罩
+		return false //通过return false阻止弹窗关闭
+	}, null, null, null, true); //通过最后一个参数为true开启遮罩
 }
 ```
 ### 自动关闭弹窗
