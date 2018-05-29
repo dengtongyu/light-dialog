@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Tony.Deng (dengtongyu123@163.com)
+ * @date    2018-05-29 10:44:02
+ * @version $Id$
+ */
+
+body,html {
+	background-color: #e2e2e2;
+	font-size:36px;
+}
+
+html {
+	height: 100%
+}
+
+body {
+	min-height: 100%
+}
+
+dl {
+	padding: 1.333333333333333rem 0 0
+}
+
+dl>dt {
+	line-height: 1.4rem
+}
+
+dl>dd {
+	margin-top: 1.4rem
+}
+
+button {
+	width: 5rem;
+	height: 1.6rem;
+	border: none;
+	background-color: #0fadf2;
+	color: #fff;
+	font-size: .8rem
+}
