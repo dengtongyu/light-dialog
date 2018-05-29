@@ -1,6 +1,6 @@
 # light-dialog
 
-![light-dialog](https://github.com/dengtongyu/light-dialog/blob/master/res/light-dialog.png) 
+![light-dialog](https://raw.githubusercontent.com/dengtongyu/light-dialog/master/res/light-dialog.png) 
 
 ## 前言
 light-dialog弹窗组件用于手机移动端页面，不依赖jQuery或者zepto，不兼容低版本IE浏览器。
